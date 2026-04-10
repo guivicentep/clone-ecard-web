@@ -23,6 +23,7 @@ function App() {
 	if (editing) {
 		return (
 			<EditForm
+      defaultPhoto={defaultPhoto}
 				initial={data}
 				onSave={handleSave}
 				onCancel={() => setEditing(false)}

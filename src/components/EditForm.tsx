@@ -11,8 +11,6 @@ interface Props {
 	onCancel: () => void;
 }
 
-import defaultPhoto from "./assets/mclovin.jpg"
-
 export function EditForm({ initial, defaultPhoto, onSave, onCancel }: Props) {
 	const [form, setForm] = useState<StudentData>(initial);
 
