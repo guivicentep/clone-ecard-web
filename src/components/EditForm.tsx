@@ -6,11 +6,14 @@ import "./EditForm.css";
 
 interface Props {
 	initial: StudentData;
+  defaultPhoto: string;
 	onSave: (data: StudentData) => void;
 	onCancel: () => void;
 }
 
-export function EditForm({ initial, onSave, onCancel }: Props) {
+import defaultPhoto from "./assets/mclovin.jpg"
+
+export function EditForm({ initial, defaultPhoto, onSave, onCancel }: Props) {
 	const [form, setForm] = useState<StudentData>(initial);
 
 	const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -50,7 +53,7 @@ export function EditForm({ initial, onSave, onCancel }: Props) {
 					className={`dropzone ${isDragActive ? "active" : ""}`}
 				>
 					<input {...getInputProps()} />
-					<img src={form.photoUrl} alt="Foto atual" className="photo-preview" />
+					<img src={form.photoUrl || defaultPhoto} alt="Foto atual" className="photo-preview" />
 					<p className="dropzone-hint">Toque para trocar a foto</p>
 				</div>
 

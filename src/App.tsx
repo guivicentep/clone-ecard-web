@@ -6,6 +6,10 @@ import { useStudentData } from "./hooks/useStudentData";
 import type { StudentData } from "./types";
 import "./App.css";
 
+import barCodeImg from "./assets/barcode.png"; // 👈 mova para src/assets/
+import defaultPhoto from "./assets/mclovin.jpg"; // 👈 mova para src/assets/
+import qrCodeImg from "./assets/qr-code.png"; // 👈 mova para src/assets/
+
 function App() {
 	const [showBarcode, setShowBarcode] = useState<boolean>(false);
 	const [editing, setEditing] = useState<boolean>(false);
@@ -33,13 +37,17 @@ function App() {
 				<span className="ecard-title">e-Card</span>
 				<div className="header-icons">
 					<button
-          type="button"
+						type="button"
 						className="icon-btn"
 						onClick={() => setShowBarcode(!showBarcode)}
 					>
 						{showBarcode ? <MdQrCode2 size={24} /> : <FaBarcode size={24} />}
 					</button>
-					<button type="button" className="icon-btn" onClick={() => setEditing(true)}>
+					<button
+						type="button"
+						className="icon-btn"
+						onClick={() => setEditing(true)}
+					>
 						<MdEdit size={24} />
 					</button>
 				</div>
@@ -60,7 +68,7 @@ function App() {
 
 				<div className="photo-container">
 					<img
-						src={data.photoUrl}
+						src={data.photoUrl || defaultPhoto}
 						alt="Foto do aluno"
 						className="student-photo"
 					/>
@@ -76,7 +84,7 @@ function App() {
 				<div className="qr-container">
 					<div className="qr-box">
 						<img
-							src={showBarcode ? "/barcode.png" : "/qr-code.png"}
+							src={showBarcode ? barCodeImg : qrCodeImg}
 							alt="Código"
 							className={showBarcode ? "barcode-image" : "qr-image"}
 						/>
