@@ -6,14 +6,14 @@ import { useStudentData } from "./hooks/useStudentData";
 import type { StudentData } from "./types";
 import "./App.css";
 
-import barCodeImg from "./assets/barcode.png"; // 👈 mova para src/assets/
-import defaultPhoto from "./assets/mclovin.jpg"; // 👈 mova para src/assets/
-import qrCodeImg from "./assets/qr-code.png"; // 👈 mova para src/assets/
+import barCodeImg from "./assets/barcode.png"; 
+import defaultPhoto from "./assets/mclovin.jpg"; 
+import qrCodeImg from "./assets/qr-code.png"; 
 
 function App() {
 	const [showBarcode, setShowBarcode] = useState<boolean>(false);
 	const [editing, setEditing] = useState<boolean>(false);
-	const { data, save } = useStudentData();
+	const { data, save } = useStudentData(defaultPhoto);
 
 	function handleSave(newData: StudentData) {
 		save(newData);
@@ -23,7 +23,7 @@ function App() {
 	if (editing) {
 		return (
 			<EditForm
-      defaultPhoto={defaultPhoto}
+        defaultPhoto={defaultPhoto}
 				initial={data}
 				onSave={handleSave}
 				onCancel={() => setEditing(false)}
