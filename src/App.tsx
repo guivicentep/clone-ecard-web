@@ -9,6 +9,7 @@ import "./App.css";
 import barCodeImg from "./assets/barcode.png"; 
 import defaultPhoto from "./assets/mclovin.jpg"; 
 import qrCodeImg from "./assets/qr-code.png"; 
+import logousp from "./assets/logouspp.svg";
 
 function App() {
 	const [showBarcode, setShowBarcode] = useState<boolean>(false);
@@ -58,7 +59,7 @@ function App() {
 			<div className="main-content">
 				<div className="logo-container">
 					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Webysther_20160310_-_Logo_USP.svg/200px-Webysther_20160310_-_Logo_USP.svg.png"
+						src={logousp}
 						alt="USP Logo"
 						className="usp-logo"
 					/>
