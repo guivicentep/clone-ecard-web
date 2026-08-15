@@ -59,7 +59,7 @@ function App() {
 			<div className="main-content">
 				<div className="logo-container">
 					<img
-						src={logousp}
+						src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Webysther_20160310_-_Logo_USP.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
 						alt="USP Logo"
 						className="usp-logo"
 					/>
