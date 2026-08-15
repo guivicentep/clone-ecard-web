@@ -9,7 +9,7 @@ import "./App.css";
 import barCodeImg from "./assets/barcode.png"; 
 import defaultPhoto from "./assets/mclovin.jpg"; 
 import qrCodeImg from "./assets/qr-code.png"; 
-import logousp from "./assets/logouspp.svg";
+
 
 function App() {
 	const [showBarcode, setShowBarcode] = useState<boolean>(false);
