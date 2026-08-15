@@ -1,0 +1,67 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1920 778"
+  width="1920"
+  height="778"
+  fill="none"
+>
+  <g
+    stroke="#1D1B1D"
+    stroke-width="52"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  >
+    <!-- T -->
+    <path d="M52 78H337" />
+    <path d="M337 78V596" />
+
+    <!-- S -->
+    <path
+      d="
+        M648 274
+        V184
+        C648 106 711 26 798 26
+        H1120
+        C1207 26 1270 106 1270 184
+        V504
+        C1270 582 1207 752 1120 752
+        H798
+        C711 752 648 672 648 596
+        V596
+      "
+    />
+
+    <!-- diagonal inside S -->
+    <path d="M978 200L978 200" />
+    <path d="M978 200L942 200" />
+  </g>
+
+  <!-- Diagonal detail -->
+  <path
+    d="M978 200L1270 492"
+    stroke="#1D1B1D"
+    stroke-width="52"
+    stroke-linecap="square"
+  />
+
+  <!-- Q -->
+  <g
+    stroke="#1D1B1D"
+    stroke-width="52"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  >
+    <path
+      d="
+        M1270 184
+        C1270 106 1333 26 1420 26
+        H1740
+        C1827 26 1890 106 1890 184
+        V468
+        H1582
+      "
+    />
+    <path d="M1582 208V468" />
+    <path d="M1300 752H1582V468" />
+  </g>
+</svg>
